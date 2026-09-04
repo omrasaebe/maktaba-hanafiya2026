@@ -1,87 +1,41 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>المكتبة الحنفية</title>
-<meta name="description" content="مكتبة حنفية لفهرسة الكتب والعلماء والطبقات والطبعات.">
 <style>
-body{font-family:Arial,sans-serif;margin:0;background:#f7f5ef;color:#222}
-header{background:#173b2b;color:white;padding:28px 18px;text-align:center}
-nav{background:#fff;padding:12px;text-align:center;box-shadow:0 1px 5px #ccc}
-nav a{margin:0 10px;color:#173b2b;text-decoration:none;font-weight:bold}
-main{max-width:1000px;margin:30px auto;padding:0 16px}
-.hero{background:white;padding:28px;border-radius:14px;box-shadow:0 2px 10px #ddd}
-input{width:100%;box-sizing:border-box;padding:14px;border:1px solid #ccc;border-radius:10px;font-size:16px;margin:15px 0}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:15px;margin-top:20px}
-.card{background:white;padding:20px;border-radius:12px;box-shadow:0 1px 7px #ddd}
-h2{color:#173b2b}
-footer{text-align:center;padding:30px;color:#666}
+body{margin:0;background:#f4f7f5;color:#17352a;font-family:Tahoma,Arial,sans-serif;line-height:1.8}
+header{background:#0b4d36;color:#fff;text-align:center;padding:42px 15px}
+header h1{margin:0;font-size:34px} header p{margin:8px 0}
+nav{background:#fff;padding:12px;text-align:center;position:sticky;top:0;z-index:2;box-shadow:0 2px 8px #0001}
+nav a{margin:0 8px;color:#14543b;text-decoration:none}
+main{max-width:1150px;margin:auto;padding:22px 15px}
+.intro{background:#fff;padding:22px;border-radius:16px;text-align:center;margin-bottom:20px;box-shadow:0 3px 12px #0001}
+.search{width:100%;padding:14px;border:2px solid #cfe0d7;border-radius:12px;font-size:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px}
+.card{background:#fff;padding:20px;border-radius:16px;border-top:4px solid #176b4b;box-shadow:0 3px 12px #0001;position:relative}
+.card b{position:absolute;left:15px;top:15px;background:#176b4b;color:#fff;border-radius:50%;width:30px;height:30px;text-align:center}
+.card h2{font-size:19px;color:#14543b;margin:5px 35px 8px 0}
+.card p{margin:0;color:#587065;font-size:14px}
+footer{background:#123d30;color:#fff;text-align:center;padding:25px;margin-top:25px}
 </style>
 </head>
 <body>
-<header>
-<h1>المكتبة الحنفية</h1>
-<p>فهرس علمي للكتب والعلماء والطبقات والطبعات</p>
-</header>
-<nav>
-<a href="#books">الكتب</a>
-<a href="#scholars">العلماء والطبقات</a>
-<a href="#editions">الطبعات</a>
-<a href="#about">عن المكتبة</a>
-</nav>
-<main>
-<section class="hero">
-<h2>ابحث في المكتبة</h2>
-<input id="search" placeholder="اكتب اسم الكتاب أو المؤلف..." oninput="searchBooks()">
-<div id="results"></div>
-</section>
-
-<section id="books">
-<h2>بداية الفهرس</h2>
-<div class="cards">
-<div class="card"><h3>الهداية</h3><p>المؤلف: برهان الدين المرغيناني</p><p>الفن: الفقه الحنفي</p></div>
-<div class="card"><h3>بدائع الصنائع</h3><p>المؤلف: علاء الدين الكاساني</p><p>الفن: الفقه الحنفي</p></div>
-<div class="card"><h3>المبسوط</h3><p>المؤلف: شمس الأئمة السرخسي</p><p>الفن: الفقه الحنفي</p></div>
-</div>
-</section>
-
-<section id="scholars">
-<h2>العلماء والطبقات</h2>
-<div class="cards">
-<div class="card"><h3>الإمام أبو حنيفة</h3><p>إمام المذهب الحنفي.</p></div>
-<div class="card"><h3>أبو يوسف</h3><p>من كبار أصحاب الإمام أبي حنيفة.</p></div>
-<div class="card"><h3>محمد بن الحسن الشيباني</h3><p>من كبار أصحاب الإمام أبي حنيفة.</p></div>
-</div>
-</section>
-
-<section id="editions">
-<h2>الطبعات</h2>
-<div class="card">
-<p>سيضاف هنا سجل مستقل لكل طبعة: دار النشر، المحقق، سنة الطباعة، عدد المجلدات، وملاحظات على الطبعة.</p>
-</div>
-</section>
-
-<section id="about">
-<h2>عن المكتبة</h2>
-<p>مشروع فهرسة وترتيب للتراث الحنفي، يربط الكتب بمؤلفيها وطبقاتهم وشروحهم وطبعاتهم.</p>
-</section>
+<header><h1>المكتبة الحنفية</h1><p>فهرس علمي جامع للكتب والعلماء والطبقات والمصطلحات والطبعات والدراسات</p></header>
+<nav><a href="#home">الرئيسية</a><a href="#sections">الأقسام</a><a href="#about">عن المكتبة</a></nav>
+<main id="home">
+<section class="intro"><h2>الهيكل العلمي للمكتبة</h2>
+<p>البنية الأساسية للمكتبة الحنفية، جاهزة للتوسع بالكتب والمعلومات والمراجع.</p>
+<input id="search" class="search" placeholder="ابحث في أقسام المكتبة..." oninput="searchSections()"></section>
+<section id="sections" class="grid"><article class="card"><b>1</b><h2>التعريف بالمذهب الحنفي</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>2</b><h2>تاريخ المذهب الحنفي</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>3</b><h2>جغرافية المذهب الحنفي وانتشاره</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>4</b><h2>أعلام المذهب وطبقات الفقهاء</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>5</b><h2>مصطلحات المذهب</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>6</b><h2>أصول ومنهج المذهب</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>7</b><h2>مؤلفات المذهب</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>8</b><h2>علوم الحديث عند الحنفية</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>9</b><h2>الحنفية وأهل الحديث</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>10</b><h2>الحنفية والمذاهب الأخرى</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>11</b><h2>الفقه المقارن</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>12</b><h2>القواعد الفقهية</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>13</b><h2>أصول الفقه</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>14</b><h2>التفسير عند علماء الحنفية</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>15</b><h2>الحديث وشروحه عند الحنفية</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>16</b><h2>الفتاوى والواقعات</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>17</b><h2>الطبعات والمخطوطات</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>18</b><h2>الخلاف الفقهي وأسبابه</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>19</b><h2>المعاجم والفهارس الحنفية</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>20</b><h2>البحوث والدراسات الحنفية</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>21</b><h2>الخاتمة والنتائج</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>22</b><h2>العقائد عند الحنفية</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>23</b><h2>السياسة الشرعية عند الحنفية</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>24</b><h2>الاقتصاد والفقه المالي عند الحنفية</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>25</b><h2>المعاملات المالية المعاصرة من منظور حنفي</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>26</b><h2>فقه الأسرة والمرأة عند الحنفية</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>27</b><h2>النوازل الفقهية المعاصرة</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>28</b><h2>مقاصد الشريعة في الفقه الحنفي</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>29</b><h2>فقه الأقليات المسلمة من منظور حنفي</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>30</b><h2>أدب الخلاف والمناظرة عند الحنفية</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>31</b><h2>التحقيق ودراسة التراث الحنفي</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>32</b><h2>علوم القرآن ذات الصلة بالحنفية</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>33</b><h2>القراءات والتجويد عند علماء الحنفية</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>34</b><h2>السيرة والشمائل عند علماء الحنفية</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>35</b><h2>تاريخ المذهب والعلوم المساندة ذات الصلة</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>36</b><h2>علوم العربية في خدمة الفقه والأصول الحنفية</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>37</b><h2>المنطق والجدل وآداب البحث عند علماء الحنفية</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>38</b><h2>الفتوى وآداب المفتي والمستفتي عند الحنفية</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>39</b><h2>القضاء وأدب القاضي في الفقه الحنفي</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>40</b><h2>الوقف والأوقاف والمؤسسات العلمية الحنفية</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>41</b><h2>التزكية والأخلاق والتصوف عند علماء الحنفية</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>42</b><h2>التصوف الديوبندي</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article><article class="card"><b>43</b><h2>منهج الديوبندية وفكر علماء ديوبند</h2><p>قسم جاهز لإضافة الكتب والعلماء والمراجع والطبعات والدراسات.</p></article></section>
+<section id="about" class="intro" style="margin-top:25px"><h2>عن المكتبة</h2>
+<p>مشروع لفهرسة التراث الحنفي وتنظيم الكتب والعلماء والطبقات والمصطلحات والبحوث والطبعات والمخطوطات.</p></section>
 </main>
-<footer>المكتبة الحنفية — النسخة التجريبية الأولى</footer>
-
+<footer>المكتبة الحنفية — الهيكل الأساسي للمشروع</footer>
 <script>
-const books=[
-["الهداية","برهان الدين المرغيناني","فقه حنفي"],
-["بدائع الصنائع","علاء الدين الكاساني","فقه حنفي"],
-["المبسوط","شمس الأئمة السرخسي","فقه حنفي"]
-];
-function searchBooks(){
- const q=document.getElementById("search").value.trim().toLowerCase();
- const r=document.getElementById("results");
- if(!q){r.innerHTML="";return}
- const found=books.filter(b=>b.join(" ").toLowerCase().includes(q));
- r.innerHTML=found.length?found.map(b=>`<div class="card"><b>${b[0]}</b><br>${b[1]}<br>${b[2]}</div>`).join(""):"<p>لا توجد نتيجة في الفهرس التجريبي.</p>";
+function searchSections(){
+ const q=document.getElementById('search').value.trim().toLowerCase();
+ document.querySelectorAll('.card').forEach(c=>c.style.display=(!q||c.innerText.toLowerCase().includes(q))?'':'none');
 }
 </script>
-</body>
-</html>
+</body></html>
